@@ -52,5 +52,11 @@ export class AppComponent {
     this.user.answer = this.signupForm.value.questionAnswer;
     this.user.gender = this.signupForm.value.gender;
     console.log('submitted!', this.signupForm);
+
+    // 1. not only set values but also dirty, touched etc.
+    // 2. you can pass the same object as in setValue() to reset() which will then 
+    // reset the form to specific values
+    this.signupForm.reset();
+
   }
 }
